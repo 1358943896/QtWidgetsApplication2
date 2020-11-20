@@ -10,9 +10,11 @@ class QtWidgetsApplication2 : public QMainWindow
 
 public:
     QtWidgetsApplication2(QWidget *parent = Q_NULLPTR);
-    void resetUI();
+    ~QtWidgetsApplication2();
 private:
     Ui::QtWidgetsApplication2Class ui;
+    JsContext* my_context;
+    QWebChannel* my_channel;
 private slots:
    // void loadFinished(bool a);
     void on_button_clicked();

@@ -15,11 +15,13 @@ public:
 
 signals:
     //自身信号 将从前端接收的消息发出
-    void set_La_Al_Level(QString la,QString al,QString level);
-
+    void set_Lng_Lat_Level(QString la,QString al,QString level);
+signals:
+    void send_distance_msg(QString distance);
 public slots:
     //用于接收消息的接口必须定义为public slots：，以供js调用
     // 接收前端js发送来的消息
-    void onRecvMsg(QString lng, QString lat, QString level);
+    void onRecvPositionMsg(QString lng, QString lat, QString level);
+    void onRecvDistanceMsg(QString distance);
 };
 #endif // JSCONTEXT_H

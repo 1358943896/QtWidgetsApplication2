@@ -4,18 +4,10 @@ QtWidgetsApplication2::QtWidgetsApplication2(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
-    /*connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked()));  //绑定以坐标设置中心的按钮点击事件和槽
-    connect(ui.pushButton_2, SIGNAL(clicked()), this, SLOT(on_pushButton_2_clicked()));//绑定以名字设置中心的按钮点击事件和槽
-    connect(ui.pushButton_3, SIGNAL(clicked()), this, SLOT(on_pushButton_3_clicked()));//绑定重置按钮点击事件和槽
-    connect(ui.pushButton_4, SIGNAL(clicked()), this, SLOT(on_pushButton_4_clicked()));//绑定地图放大按钮点击事件和槽
-    connect(ui.pushButton_5, SIGNAL(clicked()), this, SLOT(on_pushButton_5_clicked()));//绑定地图缩小按钮点击事件和槽
-    connect(ui.pushButton_6, SIGNAL(clicked()), this, SLOT(on_pushButton_6_clicked()));//显示交通流量图层
-    //connect(ui.pushButton_7, SIGNAL(clicked()), this, SLOT(on_button_7_clicked()));//关闭交通流量图层显示*/
-    QMetaObject().connectSlotsByName(this);
-    
-    
+    //自动绑定按钮点击事件和槽
+    QMetaObject p;
+    p.connectSlotsByName(this);
     //
-   
     //实例化交互类对象
     my_context = new JsContext(this);
     //实例化QWebChannel对象

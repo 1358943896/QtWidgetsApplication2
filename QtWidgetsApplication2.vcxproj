@@ -84,6 +84,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="region.cpp" />
     <QtRcc Include="QtWidgetsApplication2.qrc" />
     <QtUic Include="QtWidgetsApplication2.ui" />
     <QtMoc Include="QtWidgetsApplication2.h" />
@@ -93,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="jscontext.h" />
+    <ClInclude Include="region.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

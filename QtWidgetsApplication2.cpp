@@ -1,5 +1,6 @@
 #include "QtWidgetsApplication2.h"
 #include "QtCore/qmetaobject.h"
+#include"QtSql/qsqldatabase.h"
 QtWidgetsApplication2::QtWidgetsApplication2(QWidget *parent)
     : QMainWindow(parent)
 {
@@ -19,6 +20,16 @@ QtWidgetsApplication2::QtWidgetsApplication2(QWidget *parent)
     //绑定交互类的传递消息的信号和槽
     connect(my_context,SIGNAL(set_Lng_Lat_Level(QString, QString, QString)),this ,SLOT(getPositionMsg(QString, QString, QString)));
     connect(my_context, SIGNAL(send_distance_msg(QString)), this, SLOT(getDistanceMsg(QString)));
+
+    //foreach(QString driver, drivers)
+    /*QSqlDatabase db;//; = QSqlDatabase().addDatabase("QOCI");
+    db.setHostName("localhost");
+    db.setUserName("LRH");
+    db.setPassword("orcl");
+    if (db.open())
+    {
+        ui.textEdit->setText("666");
+    }*/
 }
 QtWidgetsApplication2::~QtWidgetsApplication2()
 {

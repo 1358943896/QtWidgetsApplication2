@@ -5,8 +5,8 @@ QtWidgetsApplication2::QtWidgetsApplication2(QWidget *parent)
 {
     ui.setupUi(this);
     //自动绑定按钮点击事件和槽
-    QMetaObject p;
-    p.connectSlotsByName(this);
+    /*QMetaObject p;
+    p.connectSlotsByName(this);*/
     //
     //实例化交互类对象
     my_context = new JsContext(this);

@@ -2,7 +2,7 @@
 #define JSCONTEXT_H
 
 #include <QObject>
-#include <QWebEnginePage>
+
 
 //c++与前端js的交互类 通过此类传递数据
 class JsContext : public QObject
